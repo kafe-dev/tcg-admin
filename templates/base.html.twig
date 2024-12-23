@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block meta_seo %}
+        <meta name="keywords" content="{{ app_name }}">
+        <meta name="description" content="{{ app_name }}">
+    {% endblock %}
+
+    <title>
+        {% block title %}{{ app_name }}{% endblock %}
+    </title>
+
+    {% block importmap %}
+        {{ importmap('admin') }}
+    {% endblock %}
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div id="x-wrapper" data-controller="admin--init">
+    {% block body %}{% endblock %}
+</div>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

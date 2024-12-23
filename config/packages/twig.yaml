@@ -1,0 +1,12 @@
+twig:
+    file_name_pattern: '*.twig'
+    globals:
+        app_name: '%env(APP_NAME)%'
+        app_version: '%env(APP_VERSION)%'
+        mailer_sender_email: '%env(MAILER_SENDER_EMAIL)%'
+        mailer_sender_name: '%env(MAILER_SENDER_NAME)%'
+        dev_team: 'Kafe Dev'
+
+when@test:
+    twig:
+        strict_variables: true
